@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accueille</title>
+    <link rel="stylesheet" href="accueil.css">
+</head>
+<body>
+
+  <div class="cursor"></div>
+
+    
+
+  <script type="text/javascript">
+  const cursor = document.querySelector(".cursor");
+  var timeout;
+
+  
+  document.addEventListener("mousemove", (e) => {
+    let x = e.pageX;
+    let y = e.pageY;
+
+    cursor.style.top = y + "px";
+    cursor.style.left = x + "px";
+    cursor.style.display = "block";
+
+    
+    function mouseStopped(){
+      cursor.style.display = "none";
+    }
+    clearTimeout(timeout);
+    timeout = setTimeout(mouseStopped, 1000);
+  });
+
+  
+  document.addEventListener("mouseout", () => {
+    cursor.style.display = "none";
+  });
+  </script>
+
+</body>
+</html>
+
+
+
+  </script>      
+  
+    <nav>
+      <div class="navbar">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>  
+          <div class="logo">
+            <h1><a href="accueil.html"> JR</a></h1>
+          </div>
+          <div class="menu-items">
+            <li><a href="accueil.html">Home</a></li>
+            <li><a href="abourt me.html">About me</a></li>
+            <li><a href="projet.html">Projet</a></li>
+            
+          </div>
+        </div>
+      </div>
+
+      
+    </nav>
+    <div class="delet">
+        <h1>Salut, moi c'est <span>Judicael</span></h1>
+        <p>Ici mon approche ludique en création graphique s'inspire de tout ce que j’aime,
+            <br> souvent influencée par des banalités de ma vie quotidienne!!!
+
+        </p>
+        
+        <div class="wrapper">
+          <a class="button" href="CV pdf/CV_Judicael_Rouault_Stage_3_Mois.pdf">CV</a>
+      </div>
+      
+      
+      <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <defs>
+              <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                  <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+              </filter>
+          </defs>
+      </svg>
+    </div>
+
+    
+    
+    
+    </div>
+  </body>
+</html>
+
